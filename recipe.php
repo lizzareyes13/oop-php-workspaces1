@@ -18,3 +18,19 @@
 $bluegill = new Fish();
 
  ?>
+
+ <?php
+ // Adding Properties
+ class Recipe
+{
+  public $title;
+  public $Ingredients = array();
+  public $instructions = array();
+  public $yield;
+  public $tag = array();
+  public $source = "Lizza Reyes";
+}
+
+$recipe1 = new Recipe();
+var_dump($recipe1);
+  ?>
