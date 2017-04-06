@@ -33,8 +33,6 @@ $bluegill = new Fish();
 
 $recipe1 = new Recipe();
 var_dump($recipe1);
-
-
   ?>
 
 <?php
