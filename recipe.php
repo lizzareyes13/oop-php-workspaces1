@@ -1,5 +1,6 @@
 <?php
-  class recipe {
+  class recipe
+  {
   }
 
   $recipe1 = new Recipe();
@@ -24,7 +25,7 @@ $bluegill = new Fish();
  class Recipe
 {
   public $title;
-  public $Ingredients = array();
+  public $ingredients = array();
   public $instructions = array();
   public $yield;
   public $tag = array();
@@ -39,7 +40,7 @@ var_dump($recipe1);
 class Recipe
 {
  public $title;
- public $Ingredients = array();
+ public $ingredients = array();
  public $instructions = array();
  public $yield;
  public $tag = array();
