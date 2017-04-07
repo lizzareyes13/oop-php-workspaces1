@@ -1,3 +1,4 @@
+<!-- creating classes and objects / adding and accessing properties -->
 <?php
   class recipe
   {
