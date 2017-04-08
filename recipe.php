@@ -45,17 +45,44 @@ class Recipe
  public $instructions = array();
  public $yield;
  public $tag = array();
- public $source = "Lizza Reyes";
+ public $source = "Alena Holligan";
 }
 
 $recipe1 = new Recipe();
 // Accessing Properties
 echo $recipe1->source;
-$recipe1->source = "Abuela Reyes";
+$recipe1->source = "Grandma Holligan";
 echo $recipe1->source;
 
 $recipe2 = new Recipe();
 $recipe2->source = "Betty Crocker";
 echo $recipe1->source;
 echo $recipe2->source;
+ ?>
+
+
+
+<!-- Adding Methods:
+     •A function in side a class is called a method.
+     •These methods tell an object how to perform certain actions.
+     •We can access class methods to perform actions on data of the individual objects. -->
+<?php
+  class Recipe
+  {
+    public $title;
+    public $ingredients = array();
+    public $instructions = array();
+    public $yield;
+    public $tag = array();
+    public $source = "Alena Holligan";
+
+    // ADD METHODS
+    // start code below this line
+    public function displayRecipe()
+    {
+      return $this->title . "by" . $this->source;
+    }
+    // end code above this line
+  }
+
  ?>
