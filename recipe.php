@@ -45,13 +45,13 @@ class Recipe
  public $instructions = array();
  public $yield;
  public $tag = array();
- public $source = "Alena Holligan";
+ public $source = "Lizza Reyes";
 }
 
 $recipe1 = new Recipe();
 // Accessing Properties
 echo $recipe1->source;
-$recipe1->source = "Grandma Holligan";
+$recipe1->source = "Mami Feli";
 echo $recipe1->source;
 
 $recipe2 = new Recipe();
@@ -59,7 +59,6 @@ $recipe2->source = "Betty Crocker";
 echo $recipe1->source;
 echo $recipe2->source;
  ?>
-
 
 
 <!-- Adding Methods:
@@ -74,7 +73,7 @@ echo $recipe2->source;
     public $instructions = array();
     public $yield;
     public $tag = array();
-    public $source = "Alena Holligan";
+    public $source = "Lizza Reyes";
 
     // ADD METHODS
     // start code below this line
@@ -84,5 +83,4 @@ echo $recipe2->source;
     }
     // end code above this line
   }
-
  ?>
