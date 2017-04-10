@@ -114,6 +114,75 @@ echo $recipe2->source;
 
  ?>
 
+
+<!-- ACCESS MODIFIERS -->
+<?php
+class Recipe
+
+{
+  private $title;
+  public $ingredients = array();
+  public $instructions = array();
+  public $yield;
+  public $tag = array();
+  public $source = "Alena Holligan";
+
+  private $measurement = array(
+      "tsp",
+      "tbsp",
+      "cup",
+      "oz",
+      "lb",
+      "fl oz",
+      "pint",
+      "quart",
+      "gallon"
+  );
+
+  public function setTitle($title)
+  {
+    $this->title = ucwords($title);
+  }
+
+  public function getTitle()
+  {
+    return $this->title;
+  }
+
+  public function addIngredient($item, $amount = null, $measure = null)
+  {
+    if ( $amount != null && !is_float($amount) && !is_int($amount)) {
+      exit("The amount must be a float: " . gettype($amount) . " $amount given");
+    }
+    $this->ingredients[]=array(
+      "item" => ucwords($item),
+      "amount" => $amount,
+      "measure" => $measure
+    );
+  }
+
+  public function displayRecipe()
+  {
+    return $this->title . " by " . $this->source;
+  }
+}
+$recipe1 = new Recipe();
+$recipe1->source = "Mami Feli";
+// $recipe1->title = "My First Recipe";
+$recipe1->setTitle("my first recipe");
+
+$recipe2 = new Recipe();
+$recipe2->source = "Betty Crocker";
+// $recipe2->title = "My Second Recipe";
+$recipe2->setTitle("my second recipe");
+
+echo $recipe1->getTitle();
+echo $recipe1->displayRecipe();
+echo $recipe2->displayRecipe();
+?>
+
+
+<!-- ASSOCIATIVE ARRAYS -->
 <?php
 class Recipe
 
